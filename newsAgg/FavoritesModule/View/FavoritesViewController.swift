@@ -13,5 +13,6 @@ final class FavoritesViewController: UIViewController, FavoritesViewInputProtoco
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemGroupedBackground
+        title = K.favorites
     }
 }

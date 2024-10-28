@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A5571DE62CCF94D100191210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5571DE52CCF94D100191210 /* AppDelegate.swift */; };
 		A5571DE82CCF94D100191210 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5571DE72CCF94D100191210 /* SceneDelegate.swift */; };
-		A5571DEA2CCF94D100191210 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5571DE92CCF94D100191210 /* ViewController.swift */; };
+		A5571DEA2CCF94D100191210 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5571DE92CCF94D100191210 /* Constants.swift */; };
 		A5571DEF2CCF94D200191210 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5571DEE2CCF94D200191210 /* Assets.xcassets */; };
 		A5571DF22CCF94D200191210 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5571DF02CCF94D200191210 /* LaunchScreen.storyboard */; };
 		A5571E002CCF97A200191210 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5571DFF2CCF97A200191210 /* TabBarViewController.swift */; };
@@ -33,13 +33,19 @@
 		A5571E3B2CCFAA7800191210 /* FavoritesViewInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5571E3A2CCFAA7800191210 /* FavoritesViewInputProtocol.swift */; };
 		A5571E3D2CCFAAA600191210 /* FavoritesInteractorInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5571E3C2CCFAAA600191210 /* FavoritesInteractorInputProtocol.swift */; };
 		A5571E3F2CCFAACE00191210 /* FavoritesOutputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5571E3E2CCFAACE00191210 /* FavoritesOutputProtocol.swift */; };
+		A5571E412CCFCF2000191210 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5571E402CCFCF2000191210 /* News.swift */; };
+		A5571E432CCFD4A100191210 /* NewsApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5571E422CCFD4A100191210 /* NewsApiManager.swift */; };
+		A5571E452CCFDD3C00191210 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5571E442CCFDD3C00191210 /* NewsCell.swift */; };
+		A5571E472CD00A6400191210 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5571E462CD00A6400191210 /* ImageLoader.swift */; };
+		A5571E4C2CD00D8200191210 /* NewsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5571E4B2CD00D8200191210 /* NewsRouter.swift */; };
+		A5571E4E2CD00E6100191210 /* NewsRouterInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5571E4D2CD00E6100191210 /* NewsRouterInputProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A5571DE22CCF94D100191210 /* newsAgg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newsAgg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5571DE52CCF94D100191210 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5571DE72CCF94D100191210 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A5571DE92CCF94D100191210 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A5571DE92CCF94D100191210 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A5571DEE2CCF94D200191210 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5571DF12CCF94D200191210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5571DF32CCF94D200191210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +70,12 @@
 		A5571E3A2CCFAA7800191210 /* FavoritesViewInputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewInputProtocol.swift; sourceTree = "<group>"; };
 		A5571E3C2CCFAAA600191210 /* FavoritesInteractorInputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesInteractorInputProtocol.swift; sourceTree = "<group>"; };
 		A5571E3E2CCFAACE00191210 /* FavoritesOutputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesOutputProtocol.swift; sourceTree = "<group>"; };
+		A5571E402CCFCF2000191210 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		A5571E422CCFD4A100191210 /* NewsApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiManager.swift; sourceTree = "<group>"; };
+		A5571E442CCFDD3C00191210 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		A5571E462CD00A6400191210 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		A5571E4B2CD00D8200191210 /* NewsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRouter.swift; sourceTree = "<group>"; };
+		A5571E4D2CD00E6100191210 /* NewsRouterInputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRouterInputProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +115,7 @@
 				A5571DF92CCF96D800191210 /* TabBarModule */,
 				A5571DE52CCF94D100191210 /* AppDelegate.swift */,
 				A5571DE72CCF94D100191210 /* SceneDelegate.swift */,
-				A5571DE92CCF94D100191210 /* ViewController.swift */,
+				A5571DE92CCF94D100191210 /* Constants.swift */,
 				A5571DEE2CCF94D200191210 /* Assets.xcassets */,
 				A5571DF02CCF94D200191210 /* LaunchScreen.storyboard */,
 				A5571DF32CCF94D200191210 /* Info.plist */,
@@ -161,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				A5571E142CCFA22900191210 /* Configurator */,
+				A5571E482CD00D4200191210 /* Router */,
 				A5571E122CCFA20B00191210 /* Entity */,
 				A5571E112CCFA20400191210 /* Presenter */,
 				A5571E102CCFA1FB00191210 /* Interactor */,
@@ -185,6 +198,7 @@
 			children = (
 				A5571E2A2CCFA4A600191210 /* NewsViewController.swift */,
 				A5571E302CCFA70700191210 /* NewsViewInputProtocol.swift */,
+				A5571E442CCFDD3C00191210 /* NewsCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,6 +224,7 @@
 		A5571E122CCFA20B00191210 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				A5571E402CCFCF2000191210 /* News.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -307,8 +322,19 @@
 		A5571E202CCFA3D300191210 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				A5571E422CCFD4A100191210 /* NewsApiManager.swift */,
+				A5571E462CD00A6400191210 /* ImageLoader.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		A5571E482CD00D4200191210 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A5571E4B2CD00D8200191210 /* NewsRouter.swift */,
+				A5571E4D2CD00E6100191210 /* NewsRouterInputProtocol.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,23 +408,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5571E002CCF97A200191210 /* TabBarViewController.swift in Sources */,
+				A5571E452CCFDD3C00191210 /* NewsCell.swift in Sources */,
 				A5571E022CCF97DC00191210 /* TabBarInteractor.swift in Sources */,
 				A5571E3D2CCFAAA600191210 /* FavoritesInteractorInputProtocol.swift in Sources */,
 				A5571E2F2CCFA64600191210 /* NewsInteractorInputProtocol.swift in Sources */,
 				A5571E352CCFA8EC00191210 /* FavoritesPresenter.swift in Sources */,
 				A5571E3B2CCFAA7800191210 /* FavoritesViewInputProtocol.swift in Sources */,
+				A5571E4C2CD00D8200191210 /* NewsRouter.swift in Sources */,
 				A5571E3F2CCFAACE00191210 /* FavoritesOutputProtocol.swift in Sources */,
 				A5571E2B2CCFA4A600191210 /* NewsViewController.swift in Sources */,
 				A5571E0C2CCF990100191210 /* TabBarOutputProtocol.swift in Sources */,
 				A5571E042CCF97F100191210 /* TabBarPresenter.swift in Sources */,
-				A5571DEA2CCF94D100191210 /* ViewController.swift in Sources */,
+				A5571E4E2CD00E6100191210 /* NewsRouterInputProtocol.swift in Sources */,
+				A5571DEA2CCF94D100191210 /* Constants.swift in Sources */,
 				A5571E082CCF989C00191210 /* TabBarViewInputProtocol.swift in Sources */,
 				A5571E2D2CCFA5C200191210 /* NewsOutputProtocol.swift in Sources */,
+				A5571E472CD00A6400191210 /* ImageLoader.swift in Sources */,
 				A5571E372CCFA90200191210 /* FavoritesInteractor.swift in Sources */,
 				A5571E0A2CCF98C800191210 /* TabBarInteractorInputProtocol.swift in Sources */,
 				A5571E312CCFA70700191210 /* NewsViewInputProtocol.swift in Sources */,
+				A5571E432CCFD4A100191210 /* NewsApiManager.swift in Sources */,
 				A5571E062CCF981D00191210 /* TabBarConfigurator.swift in Sources */,
 				A5571E332CCFA7E200191210 /* FavoritesConfigurator.swift in Sources */,
+				A5571E412CCFCF2000191210 /* News.swift in Sources */,
 				A5571E292CCFA49100191210 /* NewsInteractor.swift in Sources */,
 				A5571E392CCFA92100191210 /* FavoritesViewController.swift in Sources */,
 				A5571DE62CCF94D100191210 /* AppDelegate.swift in Sources */,

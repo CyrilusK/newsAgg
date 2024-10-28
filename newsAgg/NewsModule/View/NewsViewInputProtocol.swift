@@ -8,5 +8,8 @@
 import UIKit
 
 protocol NewsViewInputProtocol: AnyObject {
-    
+    func setupUI()
+    func displayError(_ message: String)
+    func setupIndicator()
+    func setNews(_ news: [NewsArticle])
 }

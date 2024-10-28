@@ -8,5 +8,5 @@
 import UIKit
 
 protocol NewsInteractorInputProtocol: AnyObject {
-    
+    func fetchNews() async
 }

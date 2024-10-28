@@ -12,10 +12,14 @@ final class NewsConfigurator {
         let view = NewsViewController()
         let presenter = NewsPresenter()
         let interactor = NewsInteractor()
+        let router = NewsRouter()
         
         view.output = presenter
         presenter.view = view
         presenter.interactor = interactor
+        presenter.router = router
+        interactor.output = presenter
+        router.entry = view
         
         return view
     }
