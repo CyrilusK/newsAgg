@@ -30,7 +30,7 @@ final class TabBarConfigurator {
         UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
         UITabBar.appearance().standardAppearance = tabBarAppearance
         
-        let newsVC = NewsConfigurator().configure()
+        let newsVC = NewsConfigurator().configure(favoritesManager: FavoritesManager())
         let newsBarItem = UITabBarItem()
         newsBarItem.image = UIImage(systemName: "newspaper.fill")
         newsVC.tabBarItem = newsBarItem

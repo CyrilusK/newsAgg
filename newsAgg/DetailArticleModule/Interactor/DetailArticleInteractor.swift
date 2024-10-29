@@ -10,6 +10,12 @@ import UIKit
 final class DetailArticleInteractor: DetailArticleInteractorInputProtocol {
     weak var output: DetailArticleOutputProtocol?
     
+    private let favoritesManager: FavoritesManager
+    
+    init(favoritesManager: FavoritesManager) {
+        self.favoritesManager = favoritesManager
+    }
+    
     func fetchImage(with url: URL) async {
         do {
             let image = try await ImageLoader().loadImage(from: url)
@@ -18,5 +24,19 @@ final class DetailArticleInteractor: DetailArticleInteractorInputProtocol {
         catch {
             self.output?.didFetchImage(nil)
         }
+    }
+    
+    func getFavoriteArticles() -> [NewsArticle] {
+        favoritesManager.getFavorites()
+    }
+    
+    func addFavorite(article: NewsArticle) {
+        favoritesManager.addFavorite(article: article)
+        favoritesManager.saveFavorites()
+    }
+    
+    func removeFavorite(with id: String) {
+        favoritesManager.removeFavorite(with: id)
+        favoritesManager.saveFavorites()
     }
 }

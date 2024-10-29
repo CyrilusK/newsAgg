@@ -12,6 +12,12 @@ final class NewsPresenter: NewsOutputProtocol {
     var interactor: NewsInteractorInputProtocol?
     var router: NewsRouterInputProtocol?
     
+    private let favoritesManager: FavoritesManager
+    
+    init(favoritesManager: FavoritesManager) {
+        self.favoritesManager = favoritesManager
+    }
+    
     func viewDidLoad() {
         Task(priority: .userInitiated) {
             await interactor?.fetchNews()
@@ -42,6 +48,6 @@ final class NewsPresenter: NewsOutputProtocol {
     }
     
     func presentNewsDetail(_ article: NewsArticle) {
-        router?.presentNewsDetail(article)
+        router?.presentNewsDetail(article, favoritesManager)
     }
 }

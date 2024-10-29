@@ -21,6 +21,9 @@ final class DetailArticlePresenter: DetailArticleOutputProtocol {
     
     func viewDidLoad() {
         view?.setupUI()
+        
+        updateFavoriteStatus()
+        
         guard let imageUrl = article.image_url, let imageURL = URL(string: imageUrl) else {
             view?.setArticleDetails(self.article, nil)
             return
@@ -47,6 +50,19 @@ final class DetailArticlePresenter: DetailArticleOutputProtocol {
     
     func didToggleFavorite() {
         isFavorite.toggle()
-        view?.setImageFavorite(isFavorite)
+        
+        if isFavorite {
+            interactor?.addFavorite(article: article)
+            view?.setImageFavorite(K.bookmarkFill)
+        } else {
+            interactor?.removeFavorite(with: article.article_id ?? "")
+            view?.setImageFavorite(K.bookmark)
+        }
+    }
+    
+    private func updateFavoriteStatus() {
+        let favorites = interactor?.getFavoriteArticles() ?? []
+        isFavorite = favorites.contains { $0.article_id == article.article_id }
+        view?.setImageFavorite(isFavorite ? K.bookmarkFill : K.bookmark)
     }
 }

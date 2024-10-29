@@ -48,6 +48,8 @@
 		A5571E5C2CD018CD00191210 /* DetailArticleRouterInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5571E5B2CD018CD00191210 /* DetailArticleRouterInputProtocol.swift */; };
 		A5571E5E2CD018EF00191210 /* DetailArticleInteractorInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5571E5D2CD018EF00191210 /* DetailArticleInteractorInputProtocol.swift */; };
 		A5571E602CD0191E00191210 /* DetailArticleViewInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5571E5F2CD0191E00191210 /* DetailArticleViewInputProtocol.swift */; };
+		A5571E622CD1145900191210 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5571E612CD1145900191210 /* FileManager.swift */; };
+		A5571E642CD11A2C00191210 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5571E632CD11A2C00191210 /* FavoritesManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +96,8 @@
 		A5571E5B2CD018CD00191210 /* DetailArticleRouterInputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArticleRouterInputProtocol.swift; sourceTree = "<group>"; };
 		A5571E5D2CD018EF00191210 /* DetailArticleInteractorInputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArticleInteractorInputProtocol.swift; sourceTree = "<group>"; };
 		A5571E5F2CD0191E00191210 /* DetailArticleViewInputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArticleViewInputProtocol.swift; sourceTree = "<group>"; };
+		A5571E612CD1145900191210 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		A5571E632CD11A2C00191210 /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +355,8 @@
 			children = (
 				A5571E422CCFD4A100191210 /* NewsApiManager.swift */,
 				A5571E462CD00A6400191210 /* ImageLoader.swift */,
+				A5571E612CD1145900191210 /* FileManager.swift */,
+				A5571E632CD11A2C00191210 /* FavoritesManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -436,6 +442,7 @@
 			files = (
 				A5571E002CCF97A200191210 /* TabBarViewController.swift in Sources */,
 				A5571E452CCFDD3C00191210 /* NewsCell.swift in Sources */,
+				A5571E642CD11A2C00191210 /* FavoritesManager.swift in Sources */,
 				A5571E022CCF97DC00191210 /* TabBarInteractor.swift in Sources */,
 				A5571E582CD0189200191210 /* DetailArticleViewController.swift in Sources */,
 				A5571E3D2CCFAAA600191210 /* FavoritesInteractorInputProtocol.swift in Sources */,
@@ -449,6 +456,7 @@
 				A5571E0C2CCF990100191210 /* TabBarOutputProtocol.swift in Sources */,
 				A5571E042CCF97F100191210 /* TabBarPresenter.swift in Sources */,
 				A5571E522CD0186700191210 /* DetailArticleRouter.swift in Sources */,
+				A5571E622CD1145900191210 /* FileManager.swift in Sources */,
 				A5571E602CD0191E00191210 /* DetailArticleViewInputProtocol.swift in Sources */,
 				A5571E4E2CD00E6100191210 /* NewsRouterInputProtocol.swift in Sources */,
 				A5571DEA2CCF94D100191210 /* Constants.swift in Sources */,

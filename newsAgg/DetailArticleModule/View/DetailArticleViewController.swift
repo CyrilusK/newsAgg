@@ -151,8 +151,7 @@ final class DetailArticleViewController: UITableViewController, DetailArticleVie
         output?.didTapLink(with: linkLabel.text)
     }
     
-    func setImageFavorite(_ flag: Bool) {
-        let imageName = flag ? K.bookmarkFill : K.bookmark
+    func setImageFavorite(_ imageName: String) {
         favoriteButton.setImage(UIImage(systemName: imageName), for: .normal)
     }
 }

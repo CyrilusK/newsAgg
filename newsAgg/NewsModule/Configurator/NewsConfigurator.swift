@@ -8,9 +8,9 @@
 import UIKit
 
 final class NewsConfigurator {
-    func configure() -> UIViewController {
+    func configure(favoritesManager: FavoritesManager) -> UIViewController {
         let view = NewsViewController()
-        let presenter = NewsPresenter()
+        let presenter = NewsPresenter(favoritesManager: favoritesManager)
         let interactor = NewsInteractor()
         let router = NewsRouter()
         

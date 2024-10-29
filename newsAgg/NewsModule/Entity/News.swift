@@ -11,7 +11,7 @@ struct NewsResponse: Decodable {
     let results: [NewsArticle]?
 }
 
-struct NewsArticle: Decodable {
+struct NewsArticle: Codable {
     let article_id: String?
     let title: String?
     let link: String?

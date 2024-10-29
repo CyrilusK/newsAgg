@@ -8,5 +8,5 @@
 import UIKit
 
 protocol NewsRouterInputProtocol {
-    func presentNewsDetail(_ article: NewsArticle)
+    func presentNewsDetail(_ article: NewsArticle, _ favoritesManager: FavoritesManager)
 }

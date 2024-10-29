@@ -10,5 +10,5 @@ import UIKit
 protocol DetailArticleViewInputProtocol: AnyObject {
     func setupUI()
     func setArticleDetails(_ article: NewsArticle, _ image: UIImage?)
-    func setImageFavorite(_ flag: Bool)
+    func setImageFavorite(_ imageName: String)
 }
