@@ -10,43 +10,11 @@ import UIKit
 final class NewsCell: UITableViewCell {
     private var imageViewWidthConstraint: NSLayoutConstraint?
     
-    private let previewImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 8
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
-    }()
-    
-    private let titleLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        return label
-    }()
-    
-    private let descripLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.font = UIFont.systemFont(ofSize: 12)
-        label.textColor = .gray
-        return label
-    }()
-    
-    private let creatorLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 12)
-        label.textColor = .darkGray
-        return label
-    }()
-    
-    private let pubDateLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 12)
-        label.textColor = .darkGray
-        return label
-    }()
+    private let previewImageView: UIImageView = UIImageView()
+    private let titleLabel: UILabel = UILabel()
+    private let descripLabel: UILabel = UILabel()
+    private let creatorLabel: UILabel = UILabel()
+    private let pubDateLabel: UILabel = UILabel()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -56,8 +24,45 @@ final class NewsCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     private func setupUI() {
+        setupPreviewImageView()
+        setupTitleLabel()
+        setupDescripLabel()
+        setupCreatorLabel()
+        setupPubDateLabel()
+        setupStackViews()
+    }
+    
+    private func setupPreviewImageView() {
+        previewImageView.contentMode = .scaleAspectFill
+        previewImageView.clipsToBounds = true
+        previewImageView.layer.cornerRadius = 8
+        previewImageView.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    private func setupTitleLabel() {
+        titleLabel.numberOfLines = 0
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
+    }
+    
+    private func setupDescripLabel() {
+        descripLabel.numberOfLines = 0
+        descripLabel.font = UIFont.systemFont(ofSize: 12)
+        descripLabel.textColor = .gray
+    }
+    
+    private func setupCreatorLabel() {
+        creatorLabel.font = UIFont.systemFont(ofSize: 12)
+        creatorLabel.textColor = .darkGray
+    }
+    
+    private func setupPubDateLabel() {
+        pubDateLabel.font = UIFont.systemFont(ofSize: 12)
+        pubDateLabel.textColor = .darkGray
+    }
+    
+    private func setupStackViews() {
         let authorDateStackView = UIStackView(arrangedSubviews: [creatorLabel, pubDateLabel])
         authorDateStackView.axis = .horizontal
         authorDateStackView.distribution = .equalSpacing

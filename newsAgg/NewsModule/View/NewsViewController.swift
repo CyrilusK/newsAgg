@@ -20,7 +20,6 @@ final class NewsViewController: UITableViewController, NewsViewInputProtocol {
     
     func setupUI() {
         indicatorLoading.stopAnimating()
-        tableView.register(NewsCell.self, forCellReuseIdentifier: K.newsCell)
         refreshNews.addTarget(self, action: #selector(refreshTableView), for: .valueChanged)
         tableView.refreshControl = refreshNews
     }
@@ -46,6 +45,7 @@ final class NewsViewController: UITableViewController, NewsViewInputProtocol {
         view.addSubview(indicatorLoading)
         indicatorLoading.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         indicatorLoading.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        tableView.register(NewsCell.self, forCellReuseIdentifier: K.newsCell)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

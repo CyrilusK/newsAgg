@@ -21,8 +21,12 @@ struct K {
     static let error = "Ошибка"
     static let ok = "Ок"
     static let unknownCreator = "Неизвестный автор"
+    static let noDescription = "Нет описания"
     static let news = "Новости"
     static let favorites = "Избранные"
-    
+ 
+    static let bookmark = "bookmark"
+    static let bookmarkFill = "bookmark.fill"
+    static let back = "chevron.backward"
 }
 
