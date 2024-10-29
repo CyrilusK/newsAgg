@@ -10,16 +10,7 @@ import UIKit
 final class TabBarConfigurator {
     func configure() -> UIViewController {
         let view = TabBarViewController()
-        let presenter = TabBarPresenter()
-        let interactor = TabbarInteractor()
-        
-        view.output = presenter
-        presenter.view = view
-        presenter.interactor = interactor
-        interactor.output = presenter
-        
         setupTabs(for: view)
-        
         return view
     }
     
@@ -30,14 +21,15 @@ final class TabBarConfigurator {
         UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
         UITabBar.appearance().standardAppearance = tabBarAppearance
         
-        let newsVC = NewsConfigurator().configure(favoritesManager: FavoritesManager())
+        let favoritesManager = FavoritesManager()
+        let newsVC = NewsConfigurator().configure(favoritesManager: favoritesManager)
         let newsBarItem = UITabBarItem()
-        newsBarItem.image = UIImage(systemName: "newspaper.fill")
+        newsBarItem.image = UIImage(systemName: K.newspaperFill)
         newsVC.tabBarItem = newsBarItem
         
-        let favoritesVC = FavoritesConfigurator().configure()
+        let favoritesVC = FavoritesConfigurator().configure(favoritesManager: favoritesManager)
         let favoritesBarItem = UITabBarItem()
-        favoritesBarItem.image = UIImage(systemName: "star.fill")
+        favoritesBarItem.image = UIImage(systemName: K.bookmarkFill)
         favoritesVC.tabBarItem = favoritesBarItem
         
         tabBar.viewControllers = [

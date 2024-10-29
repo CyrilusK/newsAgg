@@ -8,5 +8,6 @@
 import UIKit
 
 protocol FavoritesInteractorInputProtocol: AnyObject {
-    
+    func getFavoriteManager() -> FavoritesManager
+    func getFavoriteArticles() -> [NewsArticle]
 }

@@ -32,11 +32,9 @@ final class DetailArticleInteractor: DetailArticleInteractorInputProtocol {
     
     func addFavorite(article: NewsArticle) {
         favoritesManager.addFavorite(article: article)
-        favoritesManager.saveFavorites()
     }
     
     func removeFavorite(with id: String) {
         favoritesManager.removeFavorite(with: id)
-        favoritesManager.saveFavorites()
     }
 }

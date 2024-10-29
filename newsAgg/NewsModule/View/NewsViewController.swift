@@ -9,6 +9,7 @@ import UIKit
 
 final class NewsViewController: UITableViewController, NewsViewInputProtocol {
     var output: NewsOutputProtocol?
+    
     private var news: [NewsArticle] = []
     private let indicatorLoading = UIActivityIndicatorView(style: .medium)
     private let refreshNews = UIRefreshControl()

@@ -58,6 +58,7 @@ final class DetailArticlePresenter: DetailArticleOutputProtocol {
             interactor?.removeFavorite(with: article.article_id ?? "")
             view?.setImageFavorite(K.bookmark)
         }
+        NotificationCenter.default.post(name: .favoritesUpdated, object: nil)
     }
     
     private func updateFavoriteStatus() {

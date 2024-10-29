@@ -8,6 +8,7 @@
 import UIKit
 
 protocol FavoritesViewInputProtocol: AnyObject {
-    
+    func setupUI()
+    func setNews(_ news: [NewsArticle])
 }
 

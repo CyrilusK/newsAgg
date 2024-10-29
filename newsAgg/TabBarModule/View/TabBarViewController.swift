@@ -7,8 +7,7 @@
 
 import UIKit
 
-final class TabBarViewController: UITabBarController, TabBarViewInputProtocol {
-    var output: TabBarOutputProtocol?
+final class TabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

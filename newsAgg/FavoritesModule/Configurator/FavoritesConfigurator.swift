@@ -8,14 +8,18 @@
 import UIKit
 
 final class FavoritesConfigurator {
-    func configure() -> UIViewController {
+    func configure(favoritesManager: FavoritesManager) -> UIViewController {
         let view = FavoritesViewController()
         let presenter = FavoritesPresenter()
-        let interactor = FavoritesInteractor()
+        let interactor = FavoritesInteractor(favoritesManager: favoritesManager)
+        let router = NewsRouter()
         
         view.output = presenter
         presenter.view = view
         presenter.interactor = interactor
+        presenter.router = router
+        interactor.output = presenter
+        router.entry = view
         
         return view
     }

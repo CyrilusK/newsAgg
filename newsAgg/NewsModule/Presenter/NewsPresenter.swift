@@ -40,9 +40,9 @@ final class NewsPresenter: NewsOutputProtocol {
     func showError(_ error: Error) {
         DispatchQueue.main.async {
             if let error = error as? NewsApiError {
-                self.view?.displayError("Failed to load videos: \(error.errorDescription)")
+                self.view?.displayError("Failed to load news: \(error.errorDescription)")
             } else {
-                self.view?.displayError("Failed to load videos: \(error.localizedDescription)")
+                self.view?.displayError("Failed to load news: \(error.localizedDescription)")
             }
         }
     }

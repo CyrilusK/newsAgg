@@ -9,4 +9,18 @@ import UIKit
 
 final class FavoritesInteractor: FavoritesInteractorInputProtocol {
     weak var output: FavoritesOutputProtocol?
+    
+    private let favoritesManager: FavoritesManager
+    
+    init(favoritesManager: FavoritesManager) {
+        self.favoritesManager = favoritesManager
+    }
+    
+    func getFavoriteManager() -> FavoritesManager {
+        favoritesManager
+    }
+    
+    func getFavoriteArticles() -> [NewsArticle] {
+        favoritesManager.getFavorites()
+    }
 }

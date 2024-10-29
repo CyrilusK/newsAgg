@@ -8,5 +8,6 @@
 import UIKit
 
 protocol FavoritesOutputProtocol: AnyObject {
-    
+    func viewDidLoad()
+    func presentNewsDetail(_ article: NewsArticle)
 }

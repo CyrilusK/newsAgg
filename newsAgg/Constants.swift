@@ -20,6 +20,7 @@ struct K {
     
     //Идентификаторы
     static let newsCell = "NewsCell"
+    static let favoritesUpdated = "favoritesUpdated"
     
     //Названия для UI элементов
     static let error = "Ошибка"
@@ -33,6 +34,7 @@ struct K {
     static let bookmark = "bookmark"
     static let bookmarkFill = "bookmark.fill"
     static let back = "chevron.backward"
+    static let newspaperFill = "newspaper.fill"
     
     //Имя для сохранения файла
     static let favoriteArcitlesJson = "favorites.json"
