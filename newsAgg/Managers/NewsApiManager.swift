@@ -31,8 +31,8 @@ enum NewsApiError: Error {
 }
 
 final class NewsApiManager {
-    func fetchNews() async throws -> NewsResponse {
-        guard let url = URL(string: K.urlAPI) else {
+    func fetchNews(urlString: String) async throws -> NewsResponse {
+        guard let url = URL(string: urlString) else {
             print("[DEBUG] Invalid URL")
             throw NewsApiError.invalidURL
         }

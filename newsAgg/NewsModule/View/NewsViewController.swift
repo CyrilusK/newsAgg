@@ -31,6 +31,13 @@ final class NewsViewController: UITableViewController, NewsViewInputProtocol {
         refreshNews.endRefreshing()
     }
     
+    func appendNews(_ newNews: [NewsArticle]) {
+        let startIndex = news.count
+        news.append(contentsOf: newNews)
+        let indexPaths = (startIndex..<news.count).map { IndexPath(row: $0, section: 0) }
+        tableView.insertRows(at: indexPaths, with: .automatic)
+    }
+    
     func displayError(_ message: String) {
         let alert = UIAlertController(title: K.error, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: K.ok, style: .default, handler: nil))
@@ -61,11 +68,18 @@ final class NewsViewController: UITableViewController, NewsViewInputProtocol {
     }
     
     @objc private func refreshTableView() {
-        output?.viewDidLoad()
+        output?.refreshNews()
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         output?.presentNewsDetail(news[indexPath.row])
+    }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let position = scrollView.contentOffset.y
+        if position > tableView.contentSize.height - 100 - scrollView.frame.size.height {
+            output?.pagination()
+        }
     }
 }

@@ -9,6 +9,7 @@ import UIKit
 
 struct NewsResponse: Decodable {
     let results: [NewsArticle]?
+    let nextPage: String?
 }
 
 struct NewsArticle: Codable {

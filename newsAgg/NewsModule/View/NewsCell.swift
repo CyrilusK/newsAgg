@@ -8,8 +8,6 @@
 import UIKit
 
 final class NewsCell: UITableViewCell {
-    private var imageViewWidthConstraint: NSLayoutConstraint?
-    
     private let previewImageView: UIImageView = UIImageView()
     private let titleLabel: UILabel = UILabel()
     private let descripLabel: UILabel = UILabel()
@@ -96,12 +94,12 @@ final class NewsCell: UITableViewCell {
         descripLabel.text = article.description
         
         guard let imageUrl = article.image_url, let imageURL = URL(string: imageUrl) else {
+            previewImageView.image = nil
             previewImageView.isHidden = true
             return
         }
         
         previewImageView.isHidden = false
-        imageViewWidthConstraint?.isActive = true
         
         Task {
             do {

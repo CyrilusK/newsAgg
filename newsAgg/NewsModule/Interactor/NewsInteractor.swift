@@ -10,9 +10,9 @@ import UIKit
 final class NewsInteractor: NewsInteractorInputProtocol {
     weak var output: NewsOutputProtocol?
     
-    func fetchNews() async {
+    func fetchNews(urlString: String = K.urlAPI) async {
         do {
-            let news = try await NewsApiManager().fetchNews()
+            let news = try await NewsApiManager().fetchNews(urlString: urlString)
             output?.didFetchNews(news)
         }
         catch {

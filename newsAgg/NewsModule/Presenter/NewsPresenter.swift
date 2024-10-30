@@ -13,32 +13,56 @@ final class NewsPresenter: NewsOutputProtocol {
     var router: NewsRouterInputProtocol?
     
     private let favoritesManager: FavoritesManager
+    private var response: NewsResponse? = nil
+    private var isLoading = false
+    private var isRefreshing = false
     
     init(favoritesManager: FavoritesManager) {
         self.favoritesManager = favoritesManager
     }
     
     func viewDidLoad() {
+        fetchInitialNews()
+        view?.setupIndicator()
+    }
+    
+    private func fetchInitialNews() {
+        isLoading = true
         Task(priority: .userInitiated) {
-            await interactor?.fetchNews()
+            await interactor?.fetchNews(urlString: K.urlAPI)
             DispatchQueue.main.async {
                 self.view?.setupUI()
             }
         }
-        view?.setupIndicator()
+    }
+    
+    func refreshNews() {
+        isRefreshing = true
+        Task(priority: .userInitiated) {
+            await interactor?.fetchNews(urlString: K.urlAPI)
+        }
     }
     
     func didFetchNews(_ news: NewsResponse) {
         DispatchQueue.main.async {
+            self.isLoading = false
             guard let articles = news.results else {
                 return
             }
-            self.view?.setNews(articles)
+            if self.response == nil || self.isRefreshing {
+                self.view?.setNews(articles)
+            } else {
+                self.view?.appendNews(articles)
+            }
+            self.response = news
+            self.isRefreshing = false
         }
     }
     
     func showError(_ error: Error) {
         DispatchQueue.main.async {
+            self.isLoading = false
+            self.isRefreshing = false
             if let error = error as? NewsApiError {
                 self.view?.displayError("Failed to load news: \(error.errorDescription)")
             } else {
@@ -49,5 +73,14 @@ final class NewsPresenter: NewsOutputProtocol {
     
     func presentNewsDetail(_ article: NewsArticle) {
         router?.presentNewsDetail(article, favoritesManager)
+    }
+    
+    func pagination() {
+        guard !isLoading, let nextPage = response?.nextPage else { return }
+        
+        isLoading = true
+        Task(priority: .userInitiated) {
+            await interactor?.fetchNews(urlString: K.urlAPI + K.page + nextPage)
+        }
     }
 }

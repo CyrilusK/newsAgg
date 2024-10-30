@@ -12,4 +12,6 @@ protocol NewsOutputProtocol: AnyObject {
     func didFetchNews(_ news: NewsResponse)
     func showError(_ error: Error)
     func presentNewsDetail(_ article: NewsArticle)
+    func pagination()
+    func refreshNews()
 }
