@@ -15,16 +15,14 @@ final class FavoritesManager {
         loadFavorites()
     }
     
-    deinit {
-        saveFavorites()
-    }
-    
     func addFavorite(article: NewsArticle) {
         favorites.append(article)
+        saveFavorites()
     }
     
     func removeFavorite(with id: String) {
         favorites.removeAll { $0.article_id == id }
+        saveFavorites()
     }
     
     func getFavorites() -> [NewsArticle] {

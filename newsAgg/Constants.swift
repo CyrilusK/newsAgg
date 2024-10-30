@@ -16,9 +16,8 @@ struct K {
     static let serverError = "Failed to download image from server"
     
     //Ключ api
-    static let urlAPI = "https://newsdata.io/api/1/latest?apikey=pub_575633bbadb0ca4438ec79e5d905fd7037d64&language=ru"
+    static let urlAPI = "https://newsdata.io/api/1/latest?apikey=pub_577507f2eb56063c4df972908e94bb20673ea&language=ru"
     static let page = "&page="
-    //https://newsdata.io/api/1/latest?apikey=pub_575633bbadb0ca4438ec79e5d905fd7037d64&language=ru&page=1730240580947800692
     
     //Идентификаторы
     static let newsCell = "NewsCell"
