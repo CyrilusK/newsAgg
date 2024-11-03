@@ -9,9 +9,10 @@ import UIKit
 
 final class FavoritesManager {
     private var favorites: [NewsArticle] = []
-    private let fileManager = FileManager()
+    private let storage: FavoritesStorage
     
-    init() {
+    init(storage: FavoritesStorage) {
+        self.storage = storage
         loadFavorites()
     }
     
@@ -30,11 +31,11 @@ final class FavoritesManager {
     }
     
     func saveFavorites() {
-        fileManager.saveFavoriteToFile(favoriteArticle: favorites)
+        storage.save(favoriteArticle: favorites)
     }
     
     private func loadFavorites() {
-        if let loadedFavorites = fileManager.loadFavoriteFromFile() {
+        if let loadedFavorites = storage.load() {
             favorites = loadedFavorites
         }
         else {

@@ -7,7 +7,12 @@
 
 import UIKit
 
-final class FileManager {
+protocol FavoritesStorage {
+    func save(favoriteArticle: [NewsArticle])
+    func load() -> [NewsArticle]?
+}
+
+final class FileManager: FavoritesStorage {
     private func documentsDirUrl() -> URL? {
         let url = try? Foundation.FileManager.default.url(for: .documentDirectory,
                                                 in: .userDomainMask,
@@ -17,7 +22,7 @@ final class FileManager {
         return url
     }
     
-    func saveFavoriteToFile(favoriteArticle: [NewsArticle]) {
+    func save(favoriteArticle: [NewsArticle]) {
         guard let url = documentsDirUrl()?.appendingPathComponent(K.favoriteArcitlesJson) else {
             print("[DEBUG] - failed to get documents dir url")
             return
@@ -32,7 +37,7 @@ final class FileManager {
         }
     }
     
-    func loadFavoriteFromFile() -> [NewsArticle]? {
+    func load() -> [NewsArticle]? {
         guard let url = documentsDirUrl()?.appendingPathComponent(K.favoriteArcitlesJson) else {
             print("[DEBUG] - failed to get documents dir url")
             return nil
