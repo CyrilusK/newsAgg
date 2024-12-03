@@ -18,68 +18,6 @@
             endingLineNumber = "14"
             landmarkName = "fetchNews(urlString:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "D36C3B4C-9751-4BC2-84F9-F1DD66759A88 - afa370ec9524d737"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for newsAgg.NewsInteractor.fetchNews() async -&gt; ()"
-                  moduleName = "newsAgg"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyrilkardash/Desktop/iOS/projects/newsAgg/newsAgg/NewsModule/Interactor/NewsInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "D36C3B4C-9751-4BC2-84F9-F1DD66759A88 - ab408a4a90a8690a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for newsAgg.NewsInteractor.fetchNews() async -&gt; ()"
-                  moduleName = "newsAgg"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyrilkardash/Desktop/iOS/projects/newsAgg/newsAgg/NewsModule/Interactor/NewsInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "D36C3B4C-9751-4BC2-84F9-F1DD66759A88 - 3be644b1116bbf39"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for newsAgg.NewsInteractor.fetchNews() async -&gt; ()"
-                  moduleName = "newsAgg"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyrilkardash/Desktop/iOS/projects/newsAgg/newsAgg/NewsModule/Interactor/NewsInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "72">
-               </Location>
-               <Location
-                  uuid = "D36C3B4C-9751-4BC2-84F9-F1DD66759A88 - 7e0732a74f89cb3a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for newsAgg.NewsInteractor.fetchNews() async -&gt; ()"
-                  moduleName = "newsAgg"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyrilkardash/Desktop/iOS/projects/newsAgg/newsAgg/NewsModule/Interactor/NewsInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "56">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -96,38 +34,6 @@
             endingLineNumber = "13"
             landmarkName = "fetchNews(urlString:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F724C35A-2C64-4D86-B3E4-63DC9D0FBEED - a19c9b260d278462"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "newsAgg.NewsInteractor.fetchNews() async -&gt; ()"
-                  moduleName = "newsAgg"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyrilkardash/Desktop/iOS/projects/newsAgg/newsAgg/NewsModule/Interactor/NewsInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "F724C35A-2C64-4D86-B3E4-63DC9D0FBEED - afa370ec9524d7f5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for newsAgg.NewsInteractor.fetchNews() async -&gt; ()"
-                  moduleName = "newsAgg"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyrilkardash/Desktop/iOS/projects/newsAgg/newsAgg/NewsModule/Interactor/NewsInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -144,68 +50,6 @@
             endingLineNumber = "15"
             landmarkName = "fetchNews(urlString:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6CCE5D86-AA83-4C0E-A325-2D09EDE5F7EF - afa370ec9524d737"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for newsAgg.NewsInteractor.fetchNews() async -&gt; ()"
-                  moduleName = "newsAgg"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyrilkardash/Desktop/iOS/projects/newsAgg/newsAgg/NewsModule/Interactor/NewsInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "6CCE5D86-AA83-4C0E-A325-2D09EDE5F7EF - ab408a4a90a8690a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for newsAgg.NewsInteractor.fetchNews() async -&gt; ()"
-                  moduleName = "newsAgg"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyrilkardash/Desktop/iOS/projects/newsAgg/newsAgg/NewsModule/Interactor/NewsInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "6CCE5D86-AA83-4C0E-A325-2D09EDE5F7EF - 3be644b1116bbf39"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for newsAgg.NewsInteractor.fetchNews() async -&gt; ()"
-                  moduleName = "newsAgg"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyrilkardash/Desktop/iOS/projects/newsAgg/newsAgg/NewsModule/Interactor/NewsInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "72">
-               </Location>
-               <Location
-                  uuid = "6CCE5D86-AA83-4C0E-A325-2D09EDE5F7EF - 7e0732a74f89cb3a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for newsAgg.NewsInteractor.fetchNews() async -&gt; ()"
-                  moduleName = "newsAgg"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyrilkardash/Desktop/iOS/projects/newsAgg/newsAgg/NewsModule/Interactor/NewsInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "56">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -222,38 +66,6 @@
             endingLineNumber = "18"
             landmarkName = "fetchNews(urlString:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0D2C925B-6D38-4315-8B59-C5A04C3B5FFC - 7e0732a74f89c8be"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for newsAgg.NewsInteractor.fetchNews() async -&gt; ()"
-                  moduleName = "newsAgg"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyrilkardash/Desktop/iOS/projects/newsAgg/newsAgg/NewsModule/Interactor/NewsInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "108">
-               </Location>
-               <Location
-                  uuid = "0D2C925B-6D38-4315-8B59-C5A04C3B5FFC - 7e0732a74f89c8be"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for newsAgg.NewsInteractor.fetchNews() async -&gt; ()"
-                  moduleName = "newsAgg"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyrilkardash/Desktop/iOS/projects/newsAgg/newsAgg/NewsModule/Interactor/NewsInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "312">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -302,38 +114,6 @@
             endingLineNumber = "20"
             landmarkName = "fetchNews(urlString:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5D6C8941-B354-48D7-A043-831D8DA06FD2 - 3be644b1116bbc10"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for newsAgg.NewsInteractor.fetchNews() async -&gt; ()"
-                  moduleName = "newsAgg"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyrilkardash/Desktop/iOS/projects/newsAgg/newsAgg/NewsModule/Interactor/NewsInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "524">
-               </Location>
-               <Location
-                  uuid = "5D6C8941-B354-48D7-A043-831D8DA06FD2 - 7e0732a74f89c813"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for newsAgg.NewsInteractor.fetchNews() async -&gt; ()"
-                  moduleName = "newsAgg"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyrilkardash/Desktop/iOS/projects/newsAgg/newsAgg/NewsModule/Interactor/NewsInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "348">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -350,38 +130,6 @@
             endingLineNumber = "21"
             landmarkName = "fetchNews(urlString:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F5F33A62-0BC4-4215-9381-6D40DC37548F - 3be644b1116bbc10"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for newsAgg.NewsInteractor.fetchNews() async -&gt; ()"
-                  moduleName = "newsAgg"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyrilkardash/Desktop/iOS/projects/newsAgg/newsAgg/NewsModule/Interactor/NewsInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "524">
-               </Location>
-               <Location
-                  uuid = "F5F33A62-0BC4-4215-9381-6D40DC37548F - 7e0732a74f89c813"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for newsAgg.NewsInteractor.fetchNews() async -&gt; ()"
-                  moduleName = "newsAgg"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyrilkardash/Desktop/iOS/projects/newsAgg/newsAgg/NewsModule/Interactor/NewsInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "348">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

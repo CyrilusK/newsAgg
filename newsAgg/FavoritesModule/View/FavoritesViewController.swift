@@ -7,9 +7,10 @@
 
 import UIKit
 
-final class FavoritesViewController: UITableViewController, FavoritesViewInputProtocol {
+final class FavoritesViewController: UIViewController, FavoritesViewInputProtocol {
     var output: FavoritesOutputProtocol?
     
+    private let tableView = UITableView()
     private var news: [NewsArticle] = []
     
     override func viewDidLoad() {
@@ -20,6 +21,14 @@ final class FavoritesViewController: UITableViewController, FavoritesViewInputPr
     func setupUI() {
         tableView.backgroundColor = .systemGroupedBackground
         title = K.favorites
+        setupTableView()
+    }
+    
+    private func setupTableView() {
+        view.addSubview(tableView)
+        tableView.frame = view.bounds
+        tableView.delegate = self
+        tableView.dataSource = self
         tableView.register(NewsCell.self, forCellReuseIdentifier: K.newsCell)
     }
     
@@ -28,22 +37,25 @@ final class FavoritesViewController: UITableViewController, FavoritesViewInputPr
         tableView.reloadData()
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    @objc private func refreshTableView() {
+        output?.viewDidLoad()
+    }
+}
+
+extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return news.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.newsCell, for: indexPath) as! NewsCell
         let article = news[indexPath.row]
         cell.configure(with: article)
         return cell
     }
     
-    @objc private func refreshTableView() {
-        output?.viewDidLoad()
-    }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         output?.presentNewsDetail(news[indexPath.row])
     }
