@@ -10,4 +10,5 @@ import UIKit
 protocol FavoritesInteractorInputProtocol: AnyObject {
     func getFavoriteManager() -> FavoritesManager
     func getFavoriteArticles() -> [NewsArticle]
+    func removeFavorite(with id: String)
 }

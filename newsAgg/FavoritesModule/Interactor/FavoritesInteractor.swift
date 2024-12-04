@@ -23,4 +23,8 @@ final class FavoritesInteractor: FavoritesInteractorInputProtocol {
     func getFavoriteArticles() -> [NewsArticle] {
         favoritesManager.getFavorites()
     }
+    
+    func removeFavorite(with id: String) {
+        favoritesManager.removeFavorite(with: id)
+    }
 }

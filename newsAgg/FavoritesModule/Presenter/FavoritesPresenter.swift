@@ -37,4 +37,8 @@ final class FavoritesPresenter: FavoritesOutputProtocol {
     @objc private func handleFavoritesUpdated() {
         loadFavorites()
     }
+    
+    func didSwipeToDelete(_ id: String) {
+        interactor?.removeFavorite(with: id)
+    }
 }

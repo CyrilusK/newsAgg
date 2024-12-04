@@ -30,6 +30,7 @@ struct K {
     static let noDescription = "Нет описания"
     static let news = "Новости"
     static let favorites = "Избранные"
+    static let deleteAction = "Удалить"
  
     //Картинки
     static let bookmark = "bookmark"

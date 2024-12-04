@@ -59,4 +59,16 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         output?.presentNewsDetail(news[indexPath.row])
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: K.deleteAction) { [weak self] _, _, complete in
+            guard let self = self else { return }
+            let newForDelete = news[indexPath.row]
+            news.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            output?.didSwipeToDelete(newForDelete.article_id ?? "")
+        }
+        deleteAction.backgroundColor = .red
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
 }
