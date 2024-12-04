@@ -55,7 +55,7 @@ final class NewsApiManager {
 
             do {
                 let news = try JSONDecoder().decode(NewsResponse.self, from: data)
-                print("[DEBUG] Decoding successful: \(news)")
+                print("[DEBUG] Decoding successful: \(news.results?.count ?? 0)")
                 return news
             }
             catch let decodingError {

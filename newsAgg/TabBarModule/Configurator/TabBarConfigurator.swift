@@ -21,7 +21,7 @@ final class TabBarConfigurator {
         UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
         UITabBar.appearance().standardAppearance = tabBarAppearance
         
-        let favoritesManager = FavoritesManager(storage: FileManager())
+        let favoritesManager = FavoritesManager(storage: RealmStorage())
         let newsVC = NewsConfigurator().configure(favoritesManager: favoritesManager)
         let newsBarItem = UITabBarItem()
         newsBarItem.image = UIImage(systemName: K.newspaperFill)

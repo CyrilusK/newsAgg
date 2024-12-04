@@ -23,7 +23,7 @@ final class FavoritesManager {
     
     func removeFavorite(with id: String) {
         favorites.removeAll { $0.article_id == id }
-        saveFavorites()
+        storage.remove(favoriteArticleID: id)
     }
     
     func getFavorites() -> [NewsArticle] {

@@ -7,12 +7,7 @@
 
 import UIKit
 
-protocol FavoritesStorage {
-    func save(favoriteArticle: [NewsArticle])
-    func load() -> [NewsArticle]?
-}
-
-final class FileManager: FavoritesStorage {
+final class FileManager {
     private func documentsDirUrl() -> URL? {
         let url = try? Foundation.FileManager.default.url(for: .documentDirectory,
                                                 in: .userDomainMask,
