@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class FavoritesManager {
+class FavoritesManager {
     private var favorites: [NewsArticle] = []
     private let storage: FavoritesStorage
     
