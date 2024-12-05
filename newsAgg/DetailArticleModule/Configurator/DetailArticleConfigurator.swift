@@ -8,9 +8,9 @@
 import UIKit
 
 final class DetailArticleConfigurator {
-    func configure(article: NewsArticle, favoritesManager: FavoritesManager) -> UIViewController {
+    func configure(article: NewsArticle, favoritesManager: FavoritesManager, isEditable: Bool) -> UIViewController {
         let view = DetailArticleViewController()
-        let presenter = DetailArticlePresenter(article: article)
+        let presenter = DetailArticlePresenter(article: article, isEditable: isEditable)
         let interactor = DetailArticleInteractor(favoritesManager: favoritesManager)
         let router = DetailArticleRouter()
         

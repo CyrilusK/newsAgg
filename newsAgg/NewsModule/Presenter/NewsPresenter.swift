@@ -72,7 +72,7 @@ final class NewsPresenter: NewsOutputProtocol {
     }
     
     func presentNewsDetail(_ article: NewsArticle) {
-        router?.presentNewsDetail(article, favoritesManager)
+        router?.presentNewsDetail(article, favoritesManager, false)
     }
     
     func pagination() {

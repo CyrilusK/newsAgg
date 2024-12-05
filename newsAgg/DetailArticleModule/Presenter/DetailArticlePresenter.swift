@@ -14,9 +14,11 @@ final class DetailArticlePresenter: DetailArticleOutputProtocol {
  
     private var article: NewsArticle
     private var isFavorite = false
+    var isEditable = false
     
-    init(article: NewsArticle) {
+    init(article: NewsArticle, isEditable: Bool) {
         self.article = article
+        self.isEditable = isEditable
     }
     
     func viewDidLoad() {
@@ -65,5 +67,12 @@ final class DetailArticlePresenter: DetailArticleOutputProtocol {
         let favorites = interactor?.getFavoriteArticles() ?? []
         isFavorite = favorites.contains { $0.article_id == article.article_id }
         view?.setImageFavorite(isFavorite ? K.bookmarkFill : K.bookmark)
+    }
+    
+    func updateFavoriteArctile(title: String?, description: String?) {
+        article.title = title
+        article.description = description
+        interactor?.updateFavorite(article: article)
+        NotificationCenter.default.post(name: .favoritesUpdated, object: nil)
     }
 }

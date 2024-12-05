@@ -26,7 +26,7 @@ final class FavoritesPresenter: FavoritesOutputProtocol {
         guard let favoriteManager = interactor?.getFavoriteManager() else {
             return
         }
-        router?.presentNewsDetail(article, favoriteManager)
+        router?.presentNewsDetail(article, favoriteManager, true)
     }
     
     private func loadFavorites() {

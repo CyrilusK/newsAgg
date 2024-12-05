@@ -12,4 +12,5 @@ protocol DetailArticleInteractorInputProtocol: AnyObject {
     func getFavoriteArticles() -> [NewsArticle]
     func addFavorite(article: NewsArticle)
     func removeFavorite(with id: String)
+    func updateFavorite(article: NewsArticle)
 }

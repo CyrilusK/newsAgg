@@ -11,13 +11,13 @@ final class DetailArticleViewController: UITableViewController, DetailArticleVie
     var output: DetailArticleOutputProtocol?
     
     private let scrollView = UIScrollView()
-    private var mainStackView = UIStackView()
-    private var titleLabel = UILabel()
-    private var creatorLabel = UILabel()
-    private var datePubLabel = UILabel()
-    private var linkLabel = UILabel()
-    private var articleImageView = UIImageView()
-    private var descTextView = UITextView()
+    private let mainStackView = UIStackView()
+    private let titleTextView = UITextView()
+    private let creatorLabel = UILabel()
+    private let datePubLabel = UILabel()
+    private let linkLabel = UILabel()
+    private let articleImageView = UIImageView()
+    private let descTextView = UITextView()
     private let favoriteButton = UIButton(type: .system)
     private let backButton = UIButton(type: .system)
     
@@ -26,11 +26,16 @@ final class DetailArticleViewController: UITableViewController, DetailArticleVie
         output?.viewDidLoad()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        guard let _ = output?.isEditable else { return }
+        output?.updateFavoriteArctile(title: titleTextView.text, description: descTextView.text)
+    }
+    
     func setupUI() {
         view.backgroundColor = .systemGroupedBackground
         setupFavoriteButton()
         setupBackButton()
-        setupTitleLabel()
+        setupTitleTextView()
         setupCreatorLabel()
         setupDatePubLabel()
         setupArticleImageView()
@@ -53,9 +58,15 @@ final class DetailArticleViewController: UITableViewController, DetailArticleVie
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
     }
     
-    private func setupTitleLabel() {
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        titleLabel.numberOfLines = 0
+    private func setupTitleTextView() {
+        titleTextView.backgroundColor = .systemGroupedBackground
+        titleTextView.font = UIFont.boldSystemFont(ofSize: 20)
+        titleTextView.autocorrectionType = .default
+        titleTextView.textContainer.maximumNumberOfLines = 5
+        titleTextView.textContainer.lineBreakMode = .byTruncatingTail
+        titleTextView.isScrollEnabled = false
+        titleTextView.isEditable = output?.isEditable ?? false
+        titleTextView.delegate = self
     }
     
     private func setupCreatorLabel() {
@@ -80,21 +91,20 @@ final class DetailArticleViewController: UITableViewController, DetailArticleVie
     private func setupArticleImageView() {
         articleImageView.contentMode = .scaleAspectFit
         articleImageView.clipsToBounds = true
-        articleImageView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     private func setupDescTextView() {
         descTextView.backgroundColor = .systemGroupedBackground
         descTextView.font = UIFont.systemFont(ofSize: 16)
-        descTextView.isEditable = false
+        descTextView.isEditable = output?.isEditable ?? false
         descTextView.isScrollEnabled = false
-        descTextView.translatesAutoresizingMaskIntoConstraints = false
+        descTextView.delegate = self
     }
     
     private func setupStackView() {
         mainStackView.axis = .vertical
         mainStackView.spacing = 5
-        mainStackView.addArrangedSubview(titleLabel)
+        mainStackView.addArrangedSubview(titleTextView)
         mainStackView.addArrangedSubview(creatorLabel)
         mainStackView.addArrangedSubview(datePubLabel)
         mainStackView.addArrangedSubview(articleImageView)
@@ -119,7 +129,6 @@ final class DetailArticleViewController: UITableViewController, DetailArticleVie
             mainStackView.leadingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.leadingAnchor),
             mainStackView.trailingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.trailingAnchor),
             mainStackView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
-            
             mainStackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             
             articleImageView.heightAnchor.constraint(equalToConstant: 200)
@@ -127,7 +136,7 @@ final class DetailArticleViewController: UITableViewController, DetailArticleVie
     }
     
     func setArticleDetails(_ article: NewsArticle, _ image: UIImage?) {
-        titleLabel.text = article.title
+        titleTextView.text = article.title
         creatorLabel.text = article.creator?.joined(separator: ", ") ?? K.unknownCreator
         datePubLabel.text = article.pubDate
         descTextView.text = article.description ?? K.noDescription
@@ -153,5 +162,15 @@ final class DetailArticleViewController: UITableViewController, DetailArticleVie
     
     func setImageFavorite(_ imageName: String) {
         favoriteButton.setImage(UIImage(systemName: imageName), for: .normal)
+    }
+}
+
+extension DetailArticleViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
     }
 }

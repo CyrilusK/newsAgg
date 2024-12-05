@@ -42,4 +42,11 @@ final class FavoritesManager {
             favorites = []
         }
     }
+    
+    func updateFavorite(article: NewsArticle) {
+        if let index = favorites.firstIndex(where: { $0.article_id == article.article_id }) {
+            favorites[index] = article
+            saveFavorites()
+        }
+    }
 }
